@@ -1,0 +1,305 @@
+@keyframes cursor {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+:root {
+  --color-dark: #222831;
+  --color-light: white;
+  --text-color: rgb(
+    var(--text-color-R),
+    var(--text-color-G),
+    var(--text-color-B)
+  );
+  --text-color-inverse: rgb(
+    calc(255 - var(--text-color-R)),
+    calc(255 - var(--text-color-G)),
+    calc(255 - var(--text-color-B))
+  );
+  --space-side: calc(1rem + 4vw);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid; */
+  font: inherit;
+}
+
+#gatsby-focus-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color);
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Fix mobile landscape font-size change issue */
+@media only screen and (min-width: 320px) and (max-width: 670px) {
+  body {
+    -webkit-text-size-adjust: none;
+  }
+}
+
+/* === LAYOUTS === */
+
+.container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container--auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container--side {
+  margin-left: var(--space-side);
+  margin-right: var(--space-side);
+}
+
+.container--side-thin {
+  margin-left: calc(0.7rem + 2vw);
+  margin-right: calc(0.7rem + 2vw);
+}
+
+.container--flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.container--flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container--main {
+  flex: 1;
+}
+
+.navbar {
+  background: var(--color-light);
+  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem var(--space-side);
+  font-family: "Space Mono", monospace;
+  text-align: center;
+}
+
+/* May need further work w/ flexbox */
+.footer {
+  background: var(--color-dark);
+  color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem var(--space-side);
+  font-family: "Manrope", sans-serif;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 1.1em;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* === MODULES === */
+
+h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: calc(2em + 4vw);
+  font-weight: 800;
+  margin: 0.3em 0;
+}
+
+h2,
+p {
+  margin: 1em 0;
+  line-height: 2;
+}
+
+h2,
+.sub {
+  font-family: "Space Mono", monospace;
+  font-size: calc(1em + 1vw);
+  font-weight: 400;
+}
+
+p {
+  font-size: 1rem;
+}
+
+b {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Override a:-webkit-any-link */
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+/* Integrate this into a heading style? */
+.text--shadow-inverse {
+  text-shadow: var(--text-color-inverse) 0.08em -0.08em;
+  transition: all 0.5s ease-in-out;
+}
+
+.text--center {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.navbar__menu a {
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+
+.navbar__menu a:hover {
+  color: var(--bg-color);
+  transition: color 0.3s;
+}
+
+.logo {
+  font-style: italic;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--bg-color);
+  transition: color 0.3s;
+}
+
+.title--hero,
+.sub--hero {
+  margin: 0 0 48px 0;
+}
+
+.cli::before {
+  font-family: "Manrope", "Space Mono", sans-serif;
+  font-weight: 800;
+  content: "> ";
+}
+
+.cli::after {
+  content: "";
+  display: inline-block;
+  width: calc(10px + 0.2vw);
+  height: calc(10px + 1vw);
+  background: var(--text-color);
+  margin-left: 0.5em;
+  animation: cursor 1s infinite;
+}
+
+.icon-tray {
+  display: flex;
+}
+
+.icon-tray a {
+  font-size: calc(1.3em + 1vw);
+  margin-right: 1em;
+}
+
+.heart {
+  color: #f67280;
+}
+
+.img--about {
+  position: relative;
+  top: calc(30px + 4vw);
+  z-index: -1;
+  width: 70%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 2rem rgba(7, 29, 63, 0.4);
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background: var(--color-light);
+  color: var(--color-dark);
+  overflow: hidden;
+  margin: 2rem auto;
+}
+
+.card--about {
+  padding: 1em var(--space-side);
+  max-width: 600px;
+}
+
+.card--showcase {
+  margin: 2rem auto;
+  max-width: 430px;
+}
+
+.card--showcase a {
+  outline: none;
+  text-decoration: none;
+}
+
+.showcase__content {
+  padding: 2em;
+}
+
+.showcase__title {
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.showcase__sub {
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0;
+}
+
+.footer span + span {
+  margin-top: 0.5em;
+}
+
+@media only screen and (min-width: 570px) {
+  .navbar__menu a {
+    margin-left: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .title--hero,
+  .sub--hero {
+    margin: 0 0 80px 0;
+  }
+
+  .footer span + span {
+    margin: 0;
+  }
+}

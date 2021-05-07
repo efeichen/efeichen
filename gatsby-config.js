@@ -30,6 +30,17 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-emotion`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: [
+            "Space Mono:400,400italic,700,700italic",
+            "Manrope:400,500,800",
+          ],
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
