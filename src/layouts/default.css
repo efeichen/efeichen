@@ -21,7 +21,7 @@
     calc(255 - var(--text-color-G)),
     calc(255 - var(--text-color-B))
   );
-  --space-side: calc(1rem + 4vw);
+  --space-side: calc(1rem + 2vw);
 }
 
 * {
@@ -37,7 +37,7 @@
   flex-direction: column;
   background: var(--bg-color);
   min-height: 100vh;
-  font-family: "Manrope", sans-serif;
+  font-family: "Noto Serif", sans-serif;
   font-size: 1rem;
   color: var(--text-color);
 }
@@ -232,10 +232,10 @@ img {
 }
 
 .img--about {
+  display: block;
   position: relative;
   top: calc(30px + 4vw);
-  z-index: -1;
-  width: 70%;
+  width: 80%;
   max-width: 600px;
   height: auto;
   margin: 0 auto;
@@ -253,12 +253,12 @@ img {
 }
 
 .card--about {
-  padding: 1em var(--space-side);
+  padding: var(--space-side);
   max-width: 600px;
 }
 
 .card--showcase {
-  margin: 2rem auto;
+  margin: 0;
   max-width: 430px;
 }
 

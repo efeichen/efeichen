@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import Typed from "react-typed"
 import {
   FiTwitter,

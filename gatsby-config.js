@@ -37,6 +37,7 @@ module.exports = {
           families: [
             "Space Mono:400,400italic,700,700italic",
             "Manrope:400,500,800",
+            "Noto Serif:400,400italic,700,700italic",
           ],
         },
       },
