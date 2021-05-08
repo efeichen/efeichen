@@ -16,6 +16,10 @@ const AboutPage = () => {
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="A photo of Kenneth Chen"
             className="img--about"
+            css={css`
+              display: block;
+              position: relative;
+            `}
           />
           <h1
             className="text--shadow-inverse text--center"

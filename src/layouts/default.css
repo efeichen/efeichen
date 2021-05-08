@@ -130,7 +130,7 @@ h1 {
 
 h2,
 p {
-  margin: 1em 0;
+  margin-bottom: 1em;
   line-height: 2;
 }
 
@@ -232,8 +232,6 @@ img {
 }
 
 .img--about {
-  display: block;
-  position: relative;
   top: calc(30px + 4vw);
   width: 80%;
   max-width: 600px;
