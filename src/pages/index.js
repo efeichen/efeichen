@@ -7,6 +7,7 @@ import {
   FiLinkedin,
   FiInstagram,
 } from "react-icons/fi"
+import "../legacy.css"
 
 import Layout from "../layouts/default"
 import Seo from "../components/Seo"

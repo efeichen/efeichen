@@ -180,21 +180,21 @@ img {
 .navbar__menu a {
   margin-left: 0.5rem;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .navbar__menu a:hover {
   color: var(--bg-color);
-  transition: color 0.3s;
 }
 
 .logo {
   font-style: italic;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .logo:hover {
   color: var(--bg-color);
-  transition: color 0.3s;
 }
 
 .title--hero,

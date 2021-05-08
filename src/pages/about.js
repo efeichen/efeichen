@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { css } from "@emotion/react"
+import "../legacy.css"
 
 import Layout from "../layouts/default"
 import Seo from "../components/Seo"
