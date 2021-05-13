@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
+import tw, { styled } from "twin.macro"
 
 const Header = () => (
-  <header>
+  <StyledHeader>
     <nav className="navbar">
       <Link to="/" className="logo">
         efeichen
@@ -22,7 +23,15 @@ const Header = () => (
         </Link>
       </nav>
     </nav>
-  </header>
+  </StyledHeader>
 )
+
+const StyledHeader = styled.header`
+  ${tw`bg-white`}
+
+  .navbar {
+    ${tw`container mx-auto px-8 md:px-0`}
+  }
+`
 
 export default Header

@@ -93,7 +93,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.2rem var(--space-side);
+  padding: 1.2rem 0;
   font-family: "Space Mono", monospace;
   text-align: center;
 }
@@ -123,7 +123,7 @@
 
 h1 {
   font-family: "Manrope", sans-serif;
-  font-size: calc(2em + 4vw);
+  font-size: calc(2.5em + 4vw);
   font-weight: 800;
   margin: 0.3em 0;
 }
@@ -281,10 +281,6 @@ img {
   margin: 0;
 }
 
-.footer span + span {
-  margin-top: 0.5em;
-}
-
 @media only screen and (min-width: 570px) {
   .navbar__menu a {
     margin-left: 3rem;
@@ -294,7 +290,7 @@ img {
 @media only screen and (min-width: 1024px) {
   .title--hero,
   .sub--hero {
-    margin: 0 0 80px 0;
+    margin: 0 0 60px 0;
   }
 
   .footer span + span {
