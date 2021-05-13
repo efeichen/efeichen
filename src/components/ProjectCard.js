@@ -24,6 +24,8 @@ const Card = styled.div`
 `
 
 const CardImg = styled.div`
+  ${tw`border-b-2 border-gray-800`}
+
   img {
     ${tw`w-full h-full object-cover`}
   }
